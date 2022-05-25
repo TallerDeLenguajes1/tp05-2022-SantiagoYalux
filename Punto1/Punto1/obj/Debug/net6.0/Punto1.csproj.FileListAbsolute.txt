@@ -1,0 +1,15 @@
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\bin\Debug\net6.0\Punto1.exe
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\bin\Debug\net6.0\Punto1.deps.json
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\bin\Debug\net6.0\Punto1.runtimeconfig.json
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\bin\Debug\net6.0\Punto1.dll
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\bin\Debug\net6.0\Punto1.pdb
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\Punto1.csproj.AssemblyReference.cache
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\Punto1.GeneratedMSBuildEditorConfig.editorconfig
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\Punto1.AssemblyInfoInputs.cache
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\Punto1.AssemblyInfo.cs
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\Punto1.csproj.CoreCompileInputs.cache
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\Punto1.dll
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\refint\Punto1.dll
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\Punto1.pdb
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\Punto1.genruntimeconfig.cache
+C:\tallerLenguaje2do\tp05-2022-SantiagoYalux\Punto1\Punto1\obj\Debug\net6.0\ref\Punto1.dll
