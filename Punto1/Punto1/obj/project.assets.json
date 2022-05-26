@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tallerLenguaje2do\\tp05-2022-SantiagoYalux\\Punto1\\Punto1\\Punto1.csproj",
+      "projectUniqueName": "C:\\TallerLenguajesC#\\tp05-2022-SantiagoYalux\\Punto1\\Punto1\\Punto1.csproj",
       "projectName": "Punto1",
-      "projectPath": "C:\\tallerLenguaje2do\\tp05-2022-SantiagoYalux\\Punto1\\Punto1\\Punto1.csproj",
+      "projectPath": "C:\\TallerLenguajesC#\\tp05-2022-SantiagoYalux\\Punto1\\Punto1\\Punto1.csproj",
       "packagesPath": "C:\\Users\\sanyalux\\.nuget\\packages\\",
-      "outputPath": "C:\\tallerLenguaje2do\\tp05-2022-SantiagoYalux\\Punto1\\Punto1\\obj\\",
+      "outputPath": "C:\\TallerLenguajesC#\\tp05-2022-SantiagoYalux\\Punto1\\Punto1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
