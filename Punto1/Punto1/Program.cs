@@ -19,7 +19,7 @@ Console.WriteLine("numero modificado: " + numInvert.ToString());
 */
 
 /*Ejercicio 2*/
-
+/*
 ConsoleKeyInfo op;
 Menu miMenu = new Menu();
 
@@ -205,6 +205,293 @@ class Menu
         Console.WriteLine("F- Máximo entre dos números\n");
         Console.WriteLine("G- Mínimo entre dos números\n");
         Console.WriteLine("H- Salir\n");
+        Console.WriteLine("*************************");
+
+    }
+    #endregion
+}
+#endregion*/
+
+
+/*EJERCICIO 4*/
+
+ConsoleKeyInfo op;
+Menu miMenu = new Menu();
+string cadena = "";
+do
+{
+
+    miMenu.DibujarMenu();
+    op = Console.ReadKey();
+
+    switch (op.Key)
+    {
+        case ConsoleKey.A:
+            //Obtener algunas letras que forman parte de una cadena
+            Console.Clear();
+            Console.WriteLine("Ingresa la palabra");
+            cadena = Console.ReadLine();
+            ObtenerLetras(cadena);
+            Console.ReadKey();
+            break;
+
+        case ConsoleKey.B:
+            //Obtener la longitud de la cadena y muestre por pantalla
+            Console.Clear();
+
+            Console.WriteLine("Ingresa una cadena");
+            cadena = Console.ReadLine();
+            ObtenerLongitud(cadena);
+
+            Console.ReadKey();
+            break;
+
+        case ConsoleKey.C:
+            //Concatenar (Unir) dos cadenas distintas
+            Console.Clear();
+
+            UnirDosCadenas();
+
+            Console.ReadKey();
+            break;
+
+        case ConsoleKey.D:
+            //Extraer una subcadena
+
+            Console.Clear();
+
+            Console.WriteLine("Ingresa una cadena");
+            cadena = Console.ReadLine();
+            ExtraerUnaSubCadena(cadena);
+
+            Console.ReadKey();
+            break;
+        case ConsoleKey.E:
+            //Recorrer la cadena de texto 
+            Console.Clear();
+
+            Console.WriteLine("Ingresa una cadena");
+            cadena = Console.ReadLine();
+            RecorrerCadena(cadena);
+
+            Console.ReadKey();
+            break;
+
+        case ConsoleKey.F:
+            //Buscar la ocurrencia de una palabra determinada en la cadena ingresada
+            Console.Clear();
+            Console.WriteLine("Ingresa una cadena");
+            cadena = Console.ReadLine();
+
+            Console.WriteLine("ingresa la palabra buscada");
+            string palabra = Console.ReadLine();
+            PalabraEnCadena(cadena, palabra);
+
+            Console.ReadKey();
+            break;
+        case ConsoleKey.G:
+            //Convierta la cadena a Mayúsculas y luego minúsculas
+            Console.Clear();
+            Console.WriteLine("Ingresa una cadena");
+            cadena = Console.ReadLine();
+            MayusMinusCadena(cadena);
+            Console.ReadKey();
+            break;
+
+        case ConsoleKey.H:
+            //Ingrese una cadena separada por caracteres que usted determine y muestre por
+            //pantalla los resultados
+            Console.Clear();
+            Console.WriteLine("Ingresa una cadena");
+            cadena = Console.ReadLine();
+            SepararCadena(cadena);
+            Console.ReadKey();
+            break;
+
+        case ConsoleKey.I:
+            //Ingrese una cadena separada por caracteres que usted determine y muestre por
+            //pantalla los resultados
+            Console.Clear();
+            Console.WriteLine("Ingresa una ecuación");
+            cadena = Console.ReadLine();
+            ResolverEcuacion(cadena);
+
+            Console.ReadKey();
+            break;
+
+    }
+} while (op.Key != ConsoleKey.H);
+
+
+
+void ObtenerLetras(string palabra)
+{
+
+}
+
+void ObtenerLongitud(string palabra)
+{
+    Console.WriteLine("la longitud de la palabra es ", (palabra.Length).ToString());
+}
+
+void UnirDosCadenas()
+{
+    string primeraCadena;
+    string segundaCadena;
+
+    Console.WriteLine("Ingresa la primera cadena");
+    primeraCadena = Console.ReadLine();
+    Console.WriteLine("Ingresa la segunda cadena");
+    segundaCadena = Console.ReadLine();
+
+    string cadenaUnida = string.Concat(primeraCadena, segundaCadena);
+    Console.WriteLine($"Las cadenas concatenadas = {cadenaUnida}");
+
+}
+
+void ExtraerUnaSubCadena(string frase)
+{
+    int inicio = 0;
+    Console.WriteLine("Ingresa desde donde quieren obtener la cadena");
+    inicio = int.Parse(Console.ReadLine());
+    string subcadena = frase.Substring(inicio);
+
+    Console.WriteLine($"la cadena obtenida es {subcadena}");
+}
+
+void RecorrerCadena(string cadena)
+{
+    Console.WriteLine($"------Cadena Letra por Letra------");
+    foreach (var letra in cadena)
+    {
+        Console.WriteLine(letra);
+    }
+
+    Console.WriteLine($"----------------------------------");
+}
+
+void PalabraEnCadena(string cadena, string palabra)
+{
+    int cantidad = 0;
+    var cadenaSeparada = cadena.Split(" ");
+
+    foreach (var word in cadenaSeparada)
+    {
+        if (palabra == word)
+            cantidad++;
+    }
+
+
+    if (cantidad > 0)
+        Console.WriteLine($"la palabra se encontro un total de {cantidad} veces");
+    else
+        Console.WriteLine("La palabra buscada no se encuentra en la cadena");
+}
+
+void MayusMinusCadena(string cadena)
+{
+    Console.WriteLine($"En mayusculas {cadena.ToUpper()}");
+    Console.WriteLine($"En mayusculas {cadena.ToLower()}");
+}
+
+void SepararCadena(string cadena)
+{
+    string caracter;
+    Console.WriteLine("Escriba el caracter que usará para separa su cadena");
+    caracter = Console.ReadLine();
+
+    var cadenaSeparada = cadena.Split(caracter);
+
+    foreach (var word in cadenaSeparada)
+    {
+        Console.WriteLine(word);
+    }
+}
+
+void ResolverEcuacion(string cadena)
+{
+    float resultado = 0;
+
+
+    if ((cadena.Split("+")).Length > 1)
+    {
+        var cadenaSepara = cadena.Split("+");
+
+        foreach (var numero in cadenaSepara)
+        {
+            resultado += float.Parse(numero);
+        }
+        Console.WriteLine($"el resultado de la suma es = {resultado}");
+    }
+    else if ((cadena.Split("-")).Length > 1)
+    {
+        int first = 1;
+        var cadenaSepara = cadena.Split("-");
+        foreach (var numero in cadenaSepara)
+        {
+            if (first == 1)
+            {
+                resultado = float.Parse(numero);
+                first = 2;
+            }
+            else
+                resultado -= float.Parse(numero);
+            
+        }
+        Console.WriteLine($"el resultado de la resta es {resultado}");
+
+    }
+    else if ((cadena.Split("*")).Length > 1)
+    {
+        var cadenaSepara = cadena.Split("*");
+        resultado = 1;
+
+        foreach (var numero in cadenaSepara)
+        {
+            resultado *= float.Parse(numero);
+        }
+        Console.WriteLine($"el resultado de la multiplicación es {resultado}");
+    }
+    else if ((cadena.Split("/")).Length > 1)
+    {
+        int first = 1;
+        var cadenaSepara = cadena.Split("/");
+
+        foreach (var numero in cadenaSepara)
+        {
+            if (first == 1)
+            {
+                resultado = float.Parse(numero);
+                first = 2;
+            }
+            else
+            resultado /= float.Parse(numero);
+        }
+        Console.WriteLine($"el resultado de la división es {resultado}");
+
+    }
+}
+
+#region Menu
+class Menu
+{
+
+    #region Metodos
+    public void DibujarMenu()
+    {
+        Console.Clear();
+
+        Console.WriteLine("*************************");
+        Console.WriteLine("A- Obtener algunas letras que forman parte de una cadena\n");
+        Console.WriteLine("B- Obtener la longitud de la cadena y muestre por pantalla\n");
+        Console.WriteLine("C- Concatenar (Unir) dos cadenas distintas\n");
+        Console.WriteLine("D- Extraer una subcadena\n");
+        Console.WriteLine("E- Recorrer la cadena de texto\n");
+        Console.WriteLine("F- Buscar la ocurrencia de una palabra determinada en la cadena ingresada\n");
+        Console.WriteLine("G- Convierte la cadena a Mayúsculas y luego minúsculas\n");
+        Console.WriteLine("H- Cadena separada por un caracter\n");
+        Console.WriteLine("i- Operación matemática con cadena\n");
+        Console.WriteLine("j- Salir\n");
         Console.WriteLine("*************************");
 
     }
