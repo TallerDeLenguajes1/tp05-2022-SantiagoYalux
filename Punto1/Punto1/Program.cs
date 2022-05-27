@@ -320,7 +320,7 @@ do
             break;
 
     }
-} while (op.Key != ConsoleKey.H);
+} while (op.Key != ConsoleKey.J);
 
 
 
